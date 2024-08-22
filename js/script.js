@@ -13,18 +13,17 @@ Dichiariamo chi ha vinto.
 BONUS
 usare il più possibile il DOM, sia per raccogliere i dati che per stampare il risultato
 */
-
 console.log('JS OK');
 //palindroma
 
 //creo una funzione dove
 function isPalindrome(word){
-//rendo la stringa tutto in minuscolo nel caso servisse
-const lowerWord = word.toLowerCase();
-//specchio la parola
-const mirrorWord = lowerWord.split('').reverse().join('');
-//confronto la parola specchiata con la prima inserita
-return lowerWord === mirrorWord;
+    //rendo la stringa tutto in minuscolo nel caso servisse
+    const lowerWord = word.toLowerCase();
+    //specchio la parola
+    const mirrorWord = lowerWord.split('').reverse().join('');
+    //confronto la parola specchiata con la prima inserita
+    return lowerWord === mirrorWord;
 }
 
 //faccio inserire una aprola all'utente
@@ -36,3 +35,26 @@ let message = 'la parola non è palindroma';
 if (isPalindrome(userWord)) message = 'la parola è palindroma';
 
 console.log(message);
+
+//pari e dispari
+//chiedo all'utente di scegliere pari o dispari e di inserire un numero da 1 a 5
+
+
+const choiceUser = prompt('scegli tra pari o dispari:').trim();
+const numUser = parseInt(prompt('inserisci un numero da 1 a 5:'));
+
+//funzione pari
+function isEven(num){
+    return num % 2 === 0;
+}
+
+//funzione num casuale
+function getrandomNumber(){
+    return Math.floor(Math.random() * 5) +1;
+}
+const cpuNum = getrandomNumber();
+console.log('cpu: ', cpuNum);
+
+
+
+
