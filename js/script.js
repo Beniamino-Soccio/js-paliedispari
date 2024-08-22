@@ -15,3 +15,14 @@ usare il più possibile il DOM, sia per raccogliere i dati che per stampare il r
 */
 
 console.log('JS OK');
+//palindroma
+
+//creo una funzione dove
+function isPalindrome(word){
+//rendo la stringa tutto in minuscolo nel caso servisse
+const lowerWord = word.toLowerCase();
+//specchio la parola
+const mirrorWord = lowerWord.split('').reverse().join('');
+//confronto la parola specchiata con la prima inserita
+return lowerWord === mirrorWord;
+}
