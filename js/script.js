@@ -14,6 +14,7 @@ BONUS
 usare il più possibile il DOM, sia per raccogliere i dati che per stampare il risultato
 */
 console.log('JS OK');
+
 //palindroma
 
 //creo una funzione dove
@@ -37,11 +38,6 @@ if (isPalindrome(userWord)) message = 'la parola è palindroma';
 console.log(message);
 
 //pari e dispari
-//chiedo all'utente di scegliere pari o dispari e di inserire un numero da 1 a 5
-
-
-const choiceUser = prompt('scegli tra pari o dispari:').trim();
-const numUser = parseInt(prompt('inserisci un numero da 1 a 5:'));
 
 //funzione pari
 function isEven(num){
@@ -49,12 +45,27 @@ function isEven(num){
 }
 
 //funzione num casuale
-function getrandomNumber(){
+function getRandomNumber(){
     return Math.floor(Math.random() * 5) +1;
 }
-const cpuNum = getrandomNumber();
-console.log('cpu: ', cpuNum);
+//creo il numero casuale per la cpu
+const cpuNum = getRandomNumber();
+console.log('cpu num: ', cpuNum);
 
+//chiedo all'utente di scegliere pari o dispari e di inserire un numero da 1 a 5
+const choiceUser = prompt('scegli tra pari o dispari:').trim();
+const numUser = parseInt(prompt('inserisci un numero da 1 a 5:'));
+console.log('user ha scelto: ', choiceUser);
+console.log('user num: ', numUser);
 
+//sommo i due numeri
+const sum = cpuNum + numUser;
 
+//stabilisco se è pari o dispari
+const result = isEven(sum) ? 'pari' : 'dispari';
+console.log('result: ', result);
+
+//stabilisco chi ha vinto
+const resultAlert = result === choiceUser ? 'user ha vinto!' : 'cpu ha vinto!';
+console.log('alert: ', resultAlert);
 
