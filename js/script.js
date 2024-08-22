@@ -26,3 +26,13 @@ const mirrorWord = lowerWord.split('').reverse().join('');
 //confronto la parola specchiata con la prima inserita
 return lowerWord === mirrorWord;
 }
+
+//faccio inserire una aprola all'utente
+const userWord = prompt('inserisci una parola:');
+
+//vedo se la parola è palindroma
+let message = 'la parola non è palindroma';
+
+if (isPalindrome(userWord)) message = 'la parola è palindroma';
+
+console.log(message);
